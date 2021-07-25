@@ -1,0 +1,60 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}Cars List{% endblock %}
+
+{% block body %}
+
+<div class="container mb-auto">
+<div class="row d-flex">
+    <div class="col-11"><h1>Liste des Voitures</h1></div>
+    <div class="col-1 d-flex align-items-center"><a href="{{ path('car_add') }}" class="btn btn-success">Ajouter</a></div>
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Modèle</th>
+                <th scope="col">Année</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Couleur</th>
+                <th scope="col">createdAt</th>
+                <th scope="col">updatedAt</th>
+                <th scope="col">Marque</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+
+        {% for car in cars %}
+            <tbody>
+                <tr>
+                    <th scope="row">{{ car.id }}</th>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.year|date("Y") }}</td>
+                    <td>{{ car.price }} €</td>
+                    <td>{{ car.color }}</td>
+                    <td>{{ car.createdAt|date("m/d/Y H : i") }}</td>
+                    <td>{{ car.updatedAt|date("m/d/Y H : i") }}</td>
+                    <td><a href="{{ path('brand_show', {id: car.brand.id}) }}">{{ car.brand }}</a></td>
+
+                    <form action="{{ path('car_edit', {id: car.id}) }}" method="get">
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="submit" class="btn btn-success edit"><i class="far fa-edit"></i></i></button>
+                        </div>
+                    </td>
+                    </form>
+                    <form action="{{ path('car_delete', {id: car.id}) }}" method="get">
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="submit" class="btn btn-danger delete"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                    </form>
+                </tr>
+            </tbody>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}

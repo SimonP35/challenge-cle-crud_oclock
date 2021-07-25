@@ -14,5 +14,10 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+    'brand_show' => [['id'], ['_controller' => 'App\\Controller\\BrandController::show'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/brand/show']], [], []],
+    'car_list' => [[], ['_controller' => 'App\\Controller\\CarController::list'], [], [['text', '/car/list']], [], []],
+    'car_add' => [[], ['_controller' => 'App\\Controller\\CarController::add'], [], [['text', '/car/add']], [], []],
+    'car_edit' => [['id'], ['_controller' => 'App\\Controller\\CarController::edit'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/car/edit']], [], []],
+    'car_delete' => [['id'], ['_controller' => 'App\\Controller\\CarController::delete'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/car/delete']], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
 ];

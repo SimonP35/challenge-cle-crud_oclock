@@ -1,16 +1,25 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'v5.3.99',
-    'version' => '5.3.99.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
-    'name' => 'symfony/website-skeleton',
+    'reference' => 'c3d0ae82184610299f3c461940fcc36cf9e1c886',
+    'name' => '__root__',
   ),
   'versions' => 
   array (
+    '__root__' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c3d0ae82184610299f3c461940fcc36cf9e1c886',
+    ),
     'composer/package-versions-deprecated' => 
     array (
       'pretty_version' => '1.11.99.2',
@@ -56,6 +65,15 @@
       ),
       'reference' => 'a036d90c303f3163b5be8b8fde9b6755b2be4a3a',
     ),
+    'doctrine/data-fixtures' => 
+    array (
+      'pretty_version' => '1.5.0',
+      'version' => '1.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '51d3d4880d28951fff42a635a2389f8c63baddc5',
+    ),
     'doctrine/dbal' => 
     array (
       'pretty_version' => '2.13.2',
@@ -82,6 +100,15 @@
       array (
       ),
       'reference' => '4202ce675d29e70a8b9ee763bec021b6f44caccb',
+    ),
+    'doctrine/doctrine-fixtures-bundle' => 
+    array (
+      'pretty_version' => '3.4.0',
+      'version' => '3.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '870189619a7770f468ffb0b80925302e065a3b34',
     ),
     'doctrine/doctrine-migrations-bundle' => 
     array (
@@ -173,6 +200,15 @@
       ),
       'reference' => 'c81f18a3efb941d8c4d2e025f6183b5c6d697307',
     ),
+    'fakerphp/faker' => 
+    array (
+      'pretty_version' => 'v1.15.0',
+      'version' => '1.15.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '89c6201c74db25fa759ff16e78a4d8f32547770e',
+    ),
     'friendsofphp/proxy-manager-lts' => 
     array (
       'pretty_version' => 'v1.0.5',
@@ -235,6 +271,15 @@
       array (
         0 => '^2.1',
       ),
+    ),
+    'pelmered/fake-car' => 
+    array (
+      'pretty_version' => '1.6',
+      'version' => '1.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b66ad589cdd9c5458653d88bfd3de4d16cd3be6e',
     ),
     'phar-io/manifest' => 
     array (
@@ -442,8 +487,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache-implementation' => 
@@ -1273,15 +1318,6 @@
       array (
       ),
       'reference' => '8feb731cfc248cce5c0ac6eeba63ec4923c6a264',
-    ),
-    'symfony/website-skeleton' => 
-    array (
-      'pretty_version' => 'v5.3.99',
-      'version' => '5.3.99.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => NULL,
     ),
     'symfony/yaml' => 
     array (

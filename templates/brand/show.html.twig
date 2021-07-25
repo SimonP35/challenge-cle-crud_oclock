@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ brand.name }}{% endblock %}
+
+{% block body %}
+
+<div class="container mb-auto">
+<h1>{{ brand.name }}</h1>
+    <div class="row d-flex">
+        <div class="col-11"><h1>Liste des Voitures disponible pour cette marque </h1></div>
+    </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Modèle</th>
+                    <th scope="col">Année</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Couleur</th>
+                    <th scope="col">createdAt</th>
+                    <th scope="col">updatedAt</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            {% for car in brand.cars %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ car.id }}</th>
+                        <td>{{ car.model }}</td>
+                        <td>{{ car.year|date("Y") }}</td>
+                        <td>{{ car.price }} €</td>
+                        <td>{{ car.color }}</td>
+                        <td>{{ car.createdAt|date("m/d/Y H : i") }}</td>
+                        <td>{{ car.updatedAt|date("m/d/Y H : i") }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>   
+
+{% endblock %}

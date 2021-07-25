@@ -13,6 +13,8 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/car/list' => [[['_route' => 'car_list', '_controller' => 'App\\Controller\\CarController::list'], null, null, null, false, false, null]],
+        '/car/add' => [[['_route' => 'car_add', '_controller' => 'App\\Controller\\CarController::add'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -31,6 +33,11 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
+                .'|/brand/show/(\\d+)(*:185)'
+                .'|/car/(?'
+                    .'|edit/(\\d+)(*:211)'
+                    .'|delete/(\\d+)(*:231)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -40,8 +47,11 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [
-            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
+        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        185 => [[['_route' => 'brand_show', '_controller' => 'App\\Controller\\BrandController::show'], ['id'], null, null, false, true, null]],
+        211 => [[['_route' => 'car_edit', '_controller' => 'App\\Controller\\CarController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        231 => [
+            [['_route' => 'car_delete', '_controller' => 'App\\Controller\\CarController::delete'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

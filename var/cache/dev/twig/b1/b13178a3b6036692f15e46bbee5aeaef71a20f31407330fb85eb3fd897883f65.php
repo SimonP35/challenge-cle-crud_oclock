@@ -56,18 +56,27 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
         // line 8
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 14
         echo "
         ";
-        // line 12
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 15
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 18
         echo "    </head>
+
+    ";
+        // line 20
+        $this->loadTemplate("include/_nav.html.twig", "base.html.twig", 20)->display($context);
+        // line 21
+        echo "    ";
+        $this->loadTemplate("include/_flash_messages.html.twig", "base.html.twig", 21)->display($context);
+        // line 22
+        echo "
     <body>
         ";
-        // line 17
+        // line 24
         $this->displayBlock('body', $context, $blocks);
-        // line 18
+        // line 25
         echo "    </body>
 </html>
 ";
@@ -89,7 +98,7 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Hello le challenge Clé !";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -109,9 +118,16 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 9
-        echo "            ";
-        // line 10
-        echo "        ";
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/reset.css"), "html", null, true);
+        echo "\">
+        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">        
+        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\" integrity=\"sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
+        echo "\">            
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -120,7 +136,7 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
 
     }
 
-    // line 12
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -130,9 +146,9 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 13
+        // line 16
         echo "            ";
-        // line 14
+        // line 17
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -142,7 +158,7 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
 
     }
 
-    // line 17
+    // line 24
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -165,9 +181,14 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  146 => 17,  136 => 14,  134 => 13,  124 => 12,  114 => 10,  112 => 9,  102 => 8,  83 => 5,  71 => 18,  69 => 17,  65 => 15,  63 => 12,  60 => 11,  57 => 8,  53 => 5,  47 => 1,);
+        return array (  162 => 24,  152 => 17,  150 => 16,  140 => 15,  128 => 12,  121 => 9,  111 => 8,  92 => 5,  80 => 25,  78 => 24,  74 => 22,  71 => 21,  69 => 20,  65 => 18,  63 => 15,  60 => 14,  57 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -176,21 +197,28 @@ class __TwigTemplate_ccc1a362447d6bd975ef11daf7ef0a6cea075ec7489739c86d7d70c1721
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Hello le challenge Clé !{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+        <link rel=\"stylesheet\" href=\"{{ asset('css/reset.css') }}\">
+        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">        
+        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\" integrity=\"sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />
+        <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">            
         {% endblock %}
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
+
+    {% include \"include/_nav.html.twig\" %}
+    {% include 'include/_flash_messages.html.twig' %}
+
     <body>
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/templates/base.html.twig");
+", "base.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/templates/base.html.twig");
     }
 }
