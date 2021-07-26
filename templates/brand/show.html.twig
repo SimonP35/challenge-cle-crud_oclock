@@ -5,9 +5,11 @@
 {% block body %}
 
 <div class="container mb-auto">
-<h1>{{ brand.name }}</h1>
     <div class="row d-flex">
-        <div class="col-11"><h1>Liste des Voitures disponible pour cette marque </h1></div>
+        <div class="col-11">
+    <h1>Liste des Voitures de la marque {{ brand.name }}</h1>
+        <h2 class="mb-4">Nombre de modèles disponibles : {{ brand.cars|length }}</h2>
+    </div>
     </div>
         <table class="table">
             <thead>

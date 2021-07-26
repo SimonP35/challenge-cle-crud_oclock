@@ -20,7 +20,6 @@ class CarController extends AbstractController
      */
     public function list(CarRepository $cr): Response
     {
-
         $cars = $cr->findAllJoinedToBrandQB();
 
         dump($cars);
@@ -30,7 +29,7 @@ class CarController extends AbstractController
         ]);
     }
 
-        /**
+    /**
      *
      * Add Car
      * @Route("car/add", name="car_add", methods={"GET", "POST"})
@@ -109,7 +108,7 @@ class CarController extends AbstractController
         $em->remove($car);
         $em->flush();
 
-        $this->addFlash('success', 'Le film a bien été supprimé !');
+        $this->addFlash('success', 'La voiture a bien été supprimée !');
 
         return $this->redirectToRoute('car_list');
 }
