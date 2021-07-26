@@ -3395,6 +3395,6 @@ body.outlook p {
         min-width: 0;
     }
 }
-", "@email/zurb_2/main.css", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/vendor/symfony/twig-bridge/Resources/views/Email/zurb_2/main.css");
+", "@email/zurb_2/main.css", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/vendor/symfony/twig-bridge/Resources/views/Email/zurb_2/main.css");
     }
 }

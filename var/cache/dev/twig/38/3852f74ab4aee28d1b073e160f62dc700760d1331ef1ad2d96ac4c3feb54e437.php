@@ -220,6 +220,6 @@ a.doc:hover {
     top: -7em;
     visibility: hidden;
 }
-", "@WebProfiler/Profiler/open.css.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.css.twig");
+", "@WebProfiler/Profiler/open.css.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.css.twig");
     }
 }

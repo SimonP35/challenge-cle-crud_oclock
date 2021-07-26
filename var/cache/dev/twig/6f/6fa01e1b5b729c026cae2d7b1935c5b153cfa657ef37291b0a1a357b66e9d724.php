@@ -125,6 +125,6 @@ class __TwigTemplate_11267954fc36286c83d55f71b28156600df008ce5fd408bf34ff939ad64
 .exception-message-wrapper .container {
     min-height: auto;
 }
-", "@WebProfiler/Collector/exception.css.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
+", "@WebProfiler/Collector/exception.css.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
     }
 }

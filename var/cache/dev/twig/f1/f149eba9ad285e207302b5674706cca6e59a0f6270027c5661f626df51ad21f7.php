@@ -2080,6 +2080,6 @@ class __TwigTemplate_483e1db280787f58a4e8b3522517b5df46a4dfa59c57bf7d88e052927c2
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

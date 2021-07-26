@@ -413,6 +413,6 @@ class __TwigTemplate_d94a0fa6096764929379aa21969ab7e4a3911a1efa4d50493a7b7c1817d
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

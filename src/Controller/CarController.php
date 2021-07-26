@@ -22,8 +22,6 @@ class CarController extends AbstractController
     {
         $cars = $cr->findAllJoinedToBrandQB();
 
-        dump($cars);
-
         return $this->render('/car/list.html.twig', [
              'cars' => $cars 
         ]);

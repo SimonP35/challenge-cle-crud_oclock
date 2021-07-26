@@ -417,6 +417,6 @@ class __TwigTemplate_2017e9d25920ee650349cf5bf6c034bde11571c8f82d4ece14462637fd0
     });
 })();
 </script>
-", "@WebProfiler/Profiler/settings.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
+", "@WebProfiler/Profiler/settings.html.twig", "/var/www/html/trinity/Spé_Symfo/symfo-challenge-cle-crud-SimonP35/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
     }
 }

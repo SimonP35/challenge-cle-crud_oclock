@@ -19,4 +19,19 @@ class BrandRepository extends ServiceEntityRepository
         parent::__construct($registry, Brand::class);
     }
 
+    //? WIP Custom Query
+    /**
+     * @return Brand[]
+     */
+    public function findOneJoinedToCarQB($brand): ?array
+    {
+        return $this->createQueryBuilder('b')
+        ->addSelect('c')
+        ->innerJoin('b.cars', 'c')
+        ->where('c.brand = :brand')
+        ->setParameter('brand', $brand)
+        ->getQuery()
+        ->getResult();
+    }
+
 }

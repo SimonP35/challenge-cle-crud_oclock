@@ -18,7 +18,7 @@ class CarRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Car::class);
     }
-
+    
     /**
      * @return Car[]
      */
@@ -31,6 +31,5 @@ class CarRepository extends ServiceEntityRepository
         ->getQuery()
         ->getResult();
     }
-
 
 }
